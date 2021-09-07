@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Widget">
+      <UniqueIdentifier>{72d492f2-e969-4017-992e-28db6217af4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{15e54c15-7b0c-4c63-ae47-90cefa674d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{02918709-7d60-4c47-ab9a-d59cfa4c8a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IPSAPP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <None Include="IPSAPP.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ResourceCompile Include="IPSAPP.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <QtUic Include="MainViewWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TopStateBar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DRViewWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CTViewWidgets.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ResultViewWidgets.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CTAndDRViewWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <ClCompile Include="CTViewWidgets.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSStatusBar.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPThread.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonHelper.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomStyleTrackball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSLogin.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSToolsBar.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckResultWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="DataModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRCell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSToolsBarTips.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomStyleImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayPickerValueWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="SliceCell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RulerWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSThreadCoder.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSManagerDlg.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSManagerCenterWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSManagerImageWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSThreadDecoder.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSThreadReciver.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSThreadSender.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkBoxCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuspiciousObject.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenCap.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="avilib.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageStatus.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageCheckViewWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVtkAxisActor2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceInformation.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceStatusWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceTopWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSDeviceInformation.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="IPSDeviceConfig.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceLog.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVtkAxisActor3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkSliderCallBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyvtkOrientationMarkerWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainViewWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="TopStateBarWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRViewWidget.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultViewWidgets.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseView.cpp">
+      <Filter>Widget</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="IPSAPP.qrc" />
+    <QtRcc Include="Resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="TopStateBarWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DRViewWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="MainViewWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSAPP.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ResultViewWidgets.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="BaseView.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="CTViewWidgets.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSStatusBar.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSLogin.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="TCPThread.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSToolsBar.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="CheckResultWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="Cell.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DRCell.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSToolsBarTips.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplayPickerValueWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="SliceCell.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CustomStyleImage.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RulerWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSManagerDlg.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSManagerCenterWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSManagerImageWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSThreadCoder.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSThreadDecoder.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSThreadReciver.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSThreadSender.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="Cell3D.h">
+      <Filter>Source Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ScreenCap.h">
+      <Filter>Helper</Filter>
+    </QtMoc>
+    <QtMoc Include="ManageStatus.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="ManageCheckViewWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceInformation.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceStatusWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceTopWidget.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSDeviceInformation.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="IPSDeviceConfig.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceLog.h">
+      <Filter>Widget</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ModuleInterface.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell2D.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleContainer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commondef.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageComandIDDef.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonHelper.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomStyleTrackball.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkBoxCallback.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataModule.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SuspiciousObject.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="avilib.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVtkAxisActor2D.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVtkAxisActor3D.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkSliderCallBack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyvtkOrientationMarkerWidget.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="IPSAPP.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSStatusBar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSLogin.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSToolsBar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CheckResultWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSManagement.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSToolsBarTips.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DisplayPickerValueWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="RulerWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSManagerDlg.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSManagerCenterWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSManagerImageWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ManageStatus.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ManageCheckViewWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceInformation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceStatusWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceTopWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSDeviceInformation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="IPSDeviceConfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceLog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

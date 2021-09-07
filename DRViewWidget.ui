@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DRViewWidget</class>
+ <widget class="QWidget" name="DRViewWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DRViewWidget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_root">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="gridLayout_topStatus"/>
+   </item>
+   <item row="2" column="0">
+    <layout class="QVBoxLayout" name="horizontalLayout_BottomStatusBar"/>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_cell">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

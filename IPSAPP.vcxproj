@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5F7DAA44-2227-4858-AD6E-2E833B7B09CD}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\bin_debug</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(VCInstallDir)\Tools\MSVC\14.29.30037\atlmfc\lib\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\bin_release</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;svg;widgets;network;printsupport</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;svg;widgets;network;printsupport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+    <QtDeploy>true</QtDeploy>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <OutputFile>../../../bin_debug/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../../../lib_debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vtkRenderingCore-8.90d.lib;vtkCommonCore-8.90d.lib;vtkDICOMParser-8.90d.lib;vtkViewsCore-8.90d.lib;vtkImagingCore-8.90d.lib;vtkInteractionStyle-8.90d.lib;vtkRenderingFreeType-8.90d.lib;vtkInteractionImage-8.90d.lib;vtkIOImage-8.90d.lib;vtkCommonExecutionModel-8.90d.lib;vtkGUISupportQt-8.90d.lib;vtkImagingSources-8.90d.lib;vtkImagingGeneral-8.90d.lib;vtkImagingFourier-8.90d.lib;vtkImagingStatistics-8.90d.lib;vtkImagingColor-8.90d.lib;vtkImagingHybrid-8.90d.lib;vtkImagingMath-8.90d.lib;vtkImagingMorphological-8.90d.lib;vtkImagingStencil-8.90d.lib;vtkCommonDataModel-8.90d.lib;vtkRenderingLOD-8.90d.lib;vtkRenderingAnnotation-8.90d.lib;vtkRenderingLabel-8.90d.lib;vtkViewsInfovis-8.90d.lib;vtkfreetype-8.90d.lib;vtkInteractionWidgets-8.90d.lib;vtkFiltersModeling-8.90d.lib;vtkFiltersGeometry-8.90d.lib;vtkRenderingQt-8.90d.lib;vtkRenderingOpenGL2-8.90d.lib;vtkIOCore-8.90d.lib;vtkIOImport-8.90d.lib;vtkIOGeometry-8.90d.lib;vtkFiltersGeneral-8.90d.lib;vtkFiltersCore-8.90d.lib;vtkCommonTransforms-8.90d.lib;vtkCommonMath-8.90d.lib;vtkFiltersSources-8.90d.lib;vtkCommonMisc-8.90d.lib;vtkCommonComputationalGeometry-8.90d.lib;IPSImageAlgod.lib;IPSCommunicationd.lib;vtkRenderingVolumeOpenGL2-8.90d.lib;vtkRenderingVolume-8.90d.lib;platform_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../include/vtk-8.90;../IPSImageAlgo;./;../../../include/GESP/include;../IPSCommunication;../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GESP_TCP;GESP_JSON;GESP_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../include/vtk-8.90;../IPSImageAlgo;./;../../../include/GESP/include;../IPSCommunication;$(Qt_INCLUDEPATH_);../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;GESP_TCP;GESP_JSON;GESP_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>vtkRenderingCore-8.90.lib;vtkCommonCore-8.90.lib;vtkDICOMParser-8.90.lib;vtkViewsCore-8.90.lib;vtkImagingCore-8.90.lib;vtkInteractionStyle-8.90.lib;vtkRenderingFreeType-8.90.lib;vtkInteractionImage-8.90.lib;vtkIOImage-8.90.lib;vtkCommonExecutionModel-8.90.lib;vtkGUISupportQt-8.90.lib;vtkImagingSources-8.90.lib;vtkImagingGeneral-8.90.lib;vtkImagingFourier-8.90.lib;vtkImagingStatistics-8.90.lib;vtkImagingColor-8.90.lib;vtkImagingHybrid-8.90.lib;vtkImagingMath-8.90.lib;vtkImagingMorphological-8.90.lib;vtkImagingStencil-8.90.lib;vtkCommonDataModel-8.90.lib;vtkRenderingLOD-8.90.lib;vtkRenderingAnnotation-8.90.lib;vtkRenderingLabel-8.90.lib;vtkViewsInfovis-8.90.lib;vtkfreetype-8.90.lib;vtkInteractionWidgets-8.90.lib;vtkFiltersModeling-8.90.lib;vtkFiltersGeometry-8.90.lib;vtkRenderingQt-8.90.lib;vtkRenderingOpenGL2-8.90.lib;vtkIOCore-8.90.lib;vtkIOImport-8.90.lib;vtkIOGeometry-8.90.lib;vtkFiltersGeneral-8.90.lib;vtkFiltersCore-8.90.lib;vtkCommonTransforms-8.90.lib;vtkCommonMath-8.90.lib;vtkFiltersSources-8.90.lib;vtkCommonMisc-8.90.lib;vtkCommonComputationalGeometry-8.90.lib;IPSImageAlgo.lib;IPSCommunication.lib;vtkRenderingVolumeOpenGL2-8.90.lib;vtkRenderingVolume-8.90.lib;platform.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../bin_release/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../../../lib_release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="avilib.cpp" />
+    <ClCompile Include="BaseView.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="Cell2D.cpp" />
+    <ClCompile Include="Cell3D.cpp" />
+    <ClCompile Include="CheckResultWidget.cpp" />
+    <ClCompile Include="CTViewWidgets.cpp" />
+    <ClCompile Include="CustomStyleImage.cpp" />
+    <ClCompile Include="CustomStyleTrackball.cpp" />
+    <ClCompile Include="DataModule.cpp" />
+    <ClCompile Include="DeviceInformation.cpp" />
+    <ClCompile Include="DeviceLog.cpp" />
+    <ClCompile Include="DeviceStatusWidget.cpp" />
+    <ClCompile Include="DeviceTopWidget.cpp" />
+    <ClCompile Include="DisplayPickerValueWidget.cpp" />
+    <ClCompile Include="DRCell.cpp" />
+    <ClCompile Include="DRViewWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="IPSDeviceConfig.cpp" />
+    <ClCompile Include="IPSDeviceInformation.cpp" />
+    <ClCompile Include="IPSThreadDecoder.cpp" />
+    <ClCompile Include="IPSLogin.cpp" />
+    <ClCompile Include="IPSManagerCenterWidget.cpp" />
+    <ClCompile Include="IPSManagerDlg.cpp" />
+    <ClCompile Include="IPSManagerImageWidget.cpp" />
+    <ClCompile Include="IPSStatusBar.cpp" />
+    <ClCompile Include="IPSThreadCoder.cpp" />
+    <ClCompile Include="IPSThreadReciver.cpp" />
+    <ClCompile Include="IPSThreadSender.cpp" />
+    <ClCompile Include="IPSToolsBar.cpp" />
+    <ClCompile Include="IPSToolsBarTips.cpp" />
+    <ClCompile Include="JsonHelper.cpp" />
+    <ClCompile Include="ListWidget.cpp" />
+    <ClCompile Include="MainViewWidget.cpp" />
+    <ClCompile Include="ManageCheckViewWidget.cpp" />
+    <ClCompile Include="ManageStatus.cpp" />
+    <ClCompile Include="ModuleContainer.cpp" />
+    <ClCompile Include="MyVtkAxisActor2D.cpp" />
+    <ClCompile Include="MyVtkAxisActor3D.cpp" />
+    <ClCompile Include="MyvtkOrientationMarkerWidget.cpp" />
+    <ClCompile Include="ResultViewWidgets.cpp" />
+    <ClCompile Include="Ruler.cpp" />
+    <ClCompile Include="RulerWidget.cpp" />
+    <ClCompile Include="ScreenCap.cpp" />
+    <ClCompile Include="SliceCell.cpp" />
+    <ClCompile Include="SuspiciousObject.cpp" />
+    <ClCompile Include="TCPThread.cpp" />
+    <ClCompile Include="TopStateBarWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="vtkBoxCallback.cpp" />
+    <ClCompile Include="vtkSliderCallBack.cpp" />
+    <QtRcc Include="IPSAPP.qrc" />
+    <QtRcc Include="Resource.qrc" />
+    <QtUic Include="CheckResultWidget.ui" />
+    <QtUic Include="CTAndDRViewWidget.ui" />
+    <QtUic Include="CTViewWidgets.ui" />
+    <QtUic Include="DeviceInformation.ui" />
+    <QtUic Include="DeviceLog.ui" />
+    <QtUic Include="DeviceStatusWidget.ui" />
+    <QtUic Include="DeviceTopWidget.ui" />
+    <QtUic Include="DisplayPickerValueWidget.ui" />
+    <QtUic Include="DRViewWidget.ui" />
+    <QtUic Include="IPSAPP.ui" />
+    <QtMoc Include="IPSAPP.h" />
+    <ClCompile Include="IPSAPP.cpp" />
+    <ClCompile Include="main.cpp" />
+    <None Include="IPSAPP.ico" />
+    <QtUic Include="IPSDeviceConfig.ui" />
+    <QtUic Include="IPSDeviceInformation.ui" />
+    <QtUic Include="IPSLogin.ui" />
+    <QtUic Include="IPSManagement.ui" />
+    <QtUic Include="IPSManagerCenterWidget.ui" />
+    <QtUic Include="IPSManagerDlg.ui" />
+    <QtUic Include="IPSManagerImageWidget.ui" />
+    <QtUic Include="IPSStatusBar.ui" />
+    <QtUic Include="IPSToolsBar.ui" />
+    <QtUic Include="IPSToolsBarTips.ui" />
+    <QtUic Include="MainViewWidget.ui" />
+    <QtUic Include="ManageCheckViewWidget.ui" />
+    <QtUic Include="ManageStatus.ui" />
+    <QtUic Include="ResultViewWidgets.ui" />
+    <QtUic Include="RulerWidget.ui" />
+    <QtUic Include="TopStateBar.ui" />
+    <ResourceCompile Include="IPSAPP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainViewWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyvtkOrientationMarkerWidget.h" />
+    <ClInclude Include="vtkSliderCallBack.h" />
+    <QtMoc Include="ScreenCap.h" />
+    <ClInclude Include="avilib.h" />
+    <QtMoc Include="ManageStatus.h" />
+    <QtMoc Include="ManageCheckViewWidget.h" />
+    <QtMoc Include="DeviceInformation.h" />
+    <QtMoc Include="DeviceStatusWidget.h" />
+    <QtMoc Include="DeviceTopWidget.h" />
+    <QtMoc Include="IPSDeviceInformation.h" />
+    <QtMoc Include="IPSDeviceConfig.h" />
+    <QtMoc Include="DeviceLog.h" />
+    <ClInclude Include="MyVtkAxisActor2D.h" />
+    <ClInclude Include="MyVtkAxisActor3D.h" />
+    <ClInclude Include="SuspiciousObject.h" />
+    <ClInclude Include="vtkBoxCallback.h" />
+    <QtMoc Include="IPSManagerDlg.h" />
+    <QtMoc Include="IPSManagerCenterWidget.h" />
+    <QtMoc Include="IPSManagerImageWidget.h" />
+    <QtMoc Include="IPSThreadDecoder.h" />
+    <QtMoc Include="IPSThreadCoder.h" />
+    <QtMoc Include="IPSThreadSender.h" />
+    <ClInclude Include="Ruler.h" />
+    <QtMoc Include="RulerWidget.h" />
+    <QtMoc Include="SliceCell.h" />
+    <QtMoc Include="TCPThread.h" />
+    <QtMoc Include="ResultViewWidgets.h" />
+    <QtMoc Include="BaseView.h" />
+    <QtMoc Include="Cell.h" />
+    <ClInclude Include="Cell2D.h" />
+    <QtMoc Include="Cell3D.h" />
+    <QtMoc Include="CheckResultWidget.h" />
+    <ClInclude Include="commondef.h" />
+    <QtMoc Include="DRViewWidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </QtMoc>
+    <QtMoc Include="CTViewWidgets.h" />
+    <QtMoc Include="IPSStatusBar.h" />
+    <QtMoc Include="IPSLogin.h" />
+    <QtMoc Include="CustomStyleImage.h" />
+    <ClInclude Include="CustomStyleTrackball.h" />
+    <QtMoc Include="IPSToolsBar.h" />
+    <ClInclude Include="DataModule.h" />
+    <QtMoc Include="DRCell.h" />
+    <QtMoc Include="DisplayPickerValueWidget.h" />
+    <QtMoc Include="IPSToolsBarTips.h" />
+    <QtMoc Include="IPSThreadReciver.h" />
+    <ClInclude Include="JsonHelper.h" />
+    <ClInclude Include="ListWidget.h" />
+    <ClInclude Include="MessageComandIDDef.h" />
+    <ClInclude Include="ModuleInterface.h" />
+    <ClInclude Include="ModuleContainer.h" />
+    <QtMoc Include="TopStateBarWidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </QtMoc>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

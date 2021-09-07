@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManageCheckViewWidgetClass</class>
+ <widget class="QWidget" name="ManageCheckViewWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1243</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ManageCheckViewWidget</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="154,0,113,113,113,113">
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>154</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>154</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid #642AB5;border-radius:4px;</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>30</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>30</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QRadioButton" name="radio_verti">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator{image:url(:/img/res/checkwidget/hori.png);}
+QRadioButton::indicator:checked{image:url(:/img/res/checkwidget/horip.png);height:32;width:32;}
+QRadioButton::indicator:hover{image:url(:/img/res/checkwidget/horih.png);}QRadioButton{border:none;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_hori">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator{image:url(:/img/res/checkwidget/verti.png);}
+QRadioButton::indicator:checked{image:url(:/img/res/checkwidget/vertip.png);height:32;width:32;}
+QRadioButton::indicator:hover{image:url(:/img/res/checkwidget/vertih.png);}QRadioButton{border:none;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="print">
+     <property name="minimumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border-radius:7.5px;border:1px solid #642AB5;color:#FFFFFF;background:#642AB5;font:26px PingFang SC;}QPushButton:hover{background:#9254DE;font:26px PingFang SC;}QPushButton:pressed{background:#391085;font:26px PingFang SC;}</string>
+     </property>
+     <property name="text">
+      <string>打印</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="_export">
+     <property name="minimumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border-radius:7.5px;border:1px solid #642AB5;color:#FFFFFF;background:#642AB5;font:26px PingFang SC;}QPushButton:hover{background:#9254DE;font:26px PingFang SC;}QPushButton:pressed{background:#391085;font:26px PingFang SC;}</string>
+     </property>
+     <property name="text">
+      <string>导出</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="lock">
+     <property name="minimumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border-radius:7.5px;border:1px solid #642AB5;color:#FFFFFF;background:#642AB5;font:26px PingFang SC;}QPushButton:hover{background:#9254DE;}QPushButton:pressed{background:#391085;}</string>
+     </property>
+     <property name="text">
+      <string>锁定</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="_delete">
+     <property name="minimumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>113</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{border-radius:7.5px;border:1px solid #642AB5;color:#FFFFFF;background:#642AB5;font:26px PingFang SC;}QPushButton:hover{background:#9254DE;}QPushButton:pressed{background:#391085;}</string>
+     </property>
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
